@@ -1,29 +1,23 @@
 /* eslint-disable vue/no-unused-components */
+
 <template>
   <div id="app">
-  
+    <Navbar/>
+    <div class="container">
+      <router-view/>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Navbar from './components/Navbar';
 
-export default {
-  name: 'App',
-  components: {
-    // eslint-disable-next-line vue/no-unused-components
-    HelloWorld
+  export default {
+    components: { Navbar }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import "~materialize-css/dist/css/materialize.min.css";
 </style>
